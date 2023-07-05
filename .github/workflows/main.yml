@@ -24,11 +24,11 @@ env:
 
 
 jobs:
-  lacework_iac_check_job:
-   runs-on: ubuntu-latest
-    steps:
+ # lacework_iac_check_job:
+ #  runs-on: ubuntu-latest
+ #   steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+ #     - uses: actions/checkout@v3
  #     - name: Get Lacework IaC
  #       run: wget -O - https://raw.githubusercontent.com/soluble-ai/soluble-cli/master/linux-install.sh | sh
  #     - name: Set Access Token
@@ -46,12 +46,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-     # - name: "Set environmental variables"
-     #   run: |
-     #     echo "Repository=$DockerRegistry/$ORG/$RepoName" >> $GITHUB_ENV    
-     # - name: Checkout
-     #   uses: actions/checkout@v3
-     # - name: Log in to the Container registry
+      - name: "Set environmental variables"
+        run: |
+          echo "Repository=$DockerRegistry/$ORG/$RepoName" >> $GITHUB_ENV    
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Log in to the Container registry
      #   uses: docker/login-action@v2
      #   with:
      #     registry: ghcr.io
