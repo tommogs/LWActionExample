@@ -73,6 +73,10 @@ jobs:
           BUILD_REPORT_FILE_NAME: myreport.html
           SEVERITY_THRESHOLD: critical
           SIMPLE_OUTPUT: true
+          USE_POLICY: true
+          COLOR_OUTPUT: true
+          PRETTY_OUTPUT: true
+          
  
           
     #  - name: Tag the Docker image
