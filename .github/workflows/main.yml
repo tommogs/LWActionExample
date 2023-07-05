@@ -69,10 +69,12 @@ jobs:
           IMAGE_NAME: electron
           IMAGE_TAG: ${{github.run_number}}
           SAVE_RESULTS_IN_LACEWORK: true
-#           SAVE_BUILD_REPORT: true
-#           BUILD_REPORT_FILE_NAME: myreport.html
-#           FAIL_BUILD: true
+          SAVE_BUILD_REPORT: true
+          BUILD_REPORT_FILE_NAME: myreport.html
+          FAIL_BUILD: true
           SEVERITY_THRESHOLD: critical
+          SIMPLE_OUTPUT: true
+          COLOR_OUTPUT: true
           
     #  - name: Tag the Docker image
     #    run: docker tag $RepoName:${{github.run_number}} $Repository:${{github.run_number}}
