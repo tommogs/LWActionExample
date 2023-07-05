@@ -73,8 +73,8 @@ jobs:
           BUILD_REPORT_FILE_NAME: myreport.html
           FAIL_BUILD: true
           SEVERITY_THRESHOLD: critical
-          SIMPLE_OUTPUT: true
-          COLOR_OUTPUT: true
+          USE_POLICY: true
+ 
           
     #  - name: Tag the Docker image
     #    run: docker tag $RepoName:${{github.run_number}} $Repository:${{github.run_number}}
