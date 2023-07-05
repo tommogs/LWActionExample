@@ -2,18 +2,19 @@
 
 name: Lacework_CI
 
-on:
-  push:
-    branches:
-     - main
-     - test-lacework
-    paths:
-      - Makefile
-      - Dockerfile
-      - .dockerignore
-      - "**.go"
-      - "go.mod"
-      - .github/workflows/main.yml
+on: workflow_dispatch
+#on: 
+#  push:
+#    branches:
+#     - main
+#     - test-lacework
+#    paths:
+#      - Makefile
+#      - Dockerfile
+#      - .dockerignore
+#      - "**.go"
+#      - "go.mod"
+#      - .github/workflows/main.yml
       
 env:
   DockerRegistry: ghcr.io
