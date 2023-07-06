@@ -19,7 +19,7 @@ on: workflow_dispatch
 env:
   DockerRegistry: ghcr.io
   ORG: lhasadreams
-  RepoName: electron
+  RepoName: electron1
 
 
 
