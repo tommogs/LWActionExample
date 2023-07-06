@@ -19,7 +19,7 @@ on: workflow_dispatch
 env:
   DockerRegistry: ghcr.io
   ORG: lhasadreams
-  RepoName: electron2
+  RepoName: electron3
 
 
 
@@ -66,7 +66,7 @@ jobs:
         with:
           LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }} 
           LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
-          IMAGE_NAME: electron2
+          IMAGE_NAME: electron3
           IMAGE_TAG: ${{github.run_number}}
           SAVE_RESULTS_IN_LACEWORK: true
           SAVE_BUILD_REPORT: true
