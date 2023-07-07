@@ -2,8 +2,8 @@
 
 name: Lacework_CI
 
-on: workflow_dispatch
-#on: 
+on: [workflow_dispatch, pull_request]
+
 #  push:
 #    branches:
 #     - main
