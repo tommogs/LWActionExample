@@ -62,7 +62,7 @@ jobs:
           SIMPLE_OUTPUT: true
           COLOR_OUTPUT: true
           PRETTY_OUTPUT: true
-          ADDITIONAL_PARAMETERS: --policy
+          ADDITIONAL_PARAMETERS: --policy --json
  
           
     #  - name: Tag the Docker image
