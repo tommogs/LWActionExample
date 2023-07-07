@@ -39,12 +39,6 @@ jobs:
           echo "Repository=$DockerRegistry/$ORG/$RepoName" >> $GITHUB_ENV    
       - name: Checkout
         uses: actions/checkout@v3
-     # - name: Log in to the Container registry
-     #   uses: docker/login-action@v2
-     #   with:
-     #     registry: ghcr.io
-     #     username: ${{ github.actor }}
-     #     password: ${{ secrets.TOKEN_GH }}
 
       - name: Build the Docker image
         run: docker build . --file Dockerfile --tag $RepoName:${{github.run_number}}      
@@ -64,8 +58,4 @@ jobs:
           PRETTY_OUTPUT: true
           ADDITIONAL_PARAMETERS: --policy
  
-          
-    #  - name: Tag the Docker image
-    #    run: docker tag $RepoName:${{github.run_number}} $Repository:${{github.run_number}}
-    #  - name: Publish Docker image
-    #    run: docker push $Repository:${{github.run_number}}
+    
